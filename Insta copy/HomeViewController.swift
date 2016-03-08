@@ -97,9 +97,4 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
     */
     
-    @IBAction func toNewPhotoViewController(sender: AnyObject) {
-        self.performSegueWithIdentifier("toNewPhoto", sender: self)
     }
-}
-
-

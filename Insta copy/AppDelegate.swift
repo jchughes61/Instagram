@@ -29,7 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("logged in: \(PFUser.currentUser()!.username)")
             
             let goToHome = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
-            window?.rootViewController = goToHome
+            let rootViewController = window?.rootViewController as? UINavigationController
+            
+        rootViewController?.pushViewController(goToHome, animated: true)
+         
         }
         return true
     }

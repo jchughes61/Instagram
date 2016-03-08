@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             Void in
             if user != nil {
                 print("you're logged in")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                self.navigationController?.pushViewController((self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController"))!, animated: true)
             }
         }
     }
